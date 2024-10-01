@@ -7,7 +7,6 @@ from pygame.font import Font
 
 from code.Const import WIN_WIDTH, C_ORANGE, MENU_OPTION, C_WHITE, C_YELLOW
 
-
 class Menu:
     def __init__(self, window):
         self.window = window
@@ -23,6 +22,8 @@ class Menu:
             self.window.blit(source=self.surf, dest=self.rect)
             self.menu_text(50, "Mountain", C_ORANGE, ((WIN_WIDTH / 2), 70))
             self.menu_text(50, "Shooter", C_ORANGE, ((WIN_WIDTH / 2), 120))
+
+            self.menu_text(20, "Seu Nome - RU: XXXXXX", C_WHITE, ((WIN_WIDTH - 150), (WIN_HEIGHT - 30)))
 
             for i in range(len(MENU_OPTION)):
                 if i == menu_option:
